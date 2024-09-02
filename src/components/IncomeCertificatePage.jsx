@@ -1,7 +1,16 @@
 import React from "react";
 import '../components/IncomeCertificatePage.css'
+import { useNavigate } from "react-router-dom";
 
 const IncomeCertificatePage = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    // Submit the form data to the backend here
+    // After successful submission, redirect to DocumentUploadPage
+    navigate("/document");
+  };
+
   return (
     <div className="income1-container">
       {/* Sidebar Section */}
@@ -212,7 +221,7 @@ const IncomeCertificatePage = () => {
 
           {/* Submit Section */}
           <div className="income1-submit-section">
-            <button className="income1-submit">Submit</button>
+            <button className="income1-submit" onClick={handleSubmit}>Submit</button>
             <button className="income1-cancel">Cancel</button>
           </div>
         </div>

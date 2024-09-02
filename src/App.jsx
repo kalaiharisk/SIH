@@ -8,6 +8,7 @@ import IncomeCertificatePage from './components/IncomeCertificatePage'
 import ContactUs from './components/ContactUs'
 import AboutUs from './components/AboutUs'
 import VServicesPage from './components/VServicePage'
+import DocumentUploadPage from './components/DocumentUploadPage'
 
 
 function App() {
@@ -15,7 +16,6 @@ function App() {
 
   return (
     <>
-     {/* <HomePage/> */}
      <BrowserRouter>
      <Routes>
      <Route path='/SignIn' element={<SignIn/>}/>
@@ -26,8 +26,7 @@ function App() {
      <Route path='/contact' element={<ContactUs/>}/>
      <Route path='/about' element={<AboutUs/>}/>
      <Route path='/vservice' element={<VServicesPage/>}/>
-
-
+     <Route path='/document' element={<DocumentUploadPage/>}/>
      </Routes>
      </BrowserRouter>
     </>

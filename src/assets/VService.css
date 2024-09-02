@@ -1,0 +1,139 @@
+.vsp-services-page {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.vsp-sidebar {
+    width: 250px;
+    background-color: #487DB2;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.vsp-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vsp-sidebar ul li {
+    margin: 15px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.vsp-main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.vsp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.vsp-service-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.vsp-user-info {
+    text-align: right;
+    color: #666;
+}
+
+.vsp-services-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.vsp-filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.vsp-filter {
+    flex-basis: 30%;
+}
+
+.vsp-filter label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.vsp-filter select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.vsp-search {
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.vsp-search label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.vsp-search input {
+    width: calc(100% - 80px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.vsp-search button {
+    padding: 5px 15px;
+    border: none;
+    background-color: #487DB2;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.vsp-service-list {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.vsp-service-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vsp-service-list th, .vsp-service-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.vsp-pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.vsp-pagination button {
+    padding: 5px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #487DB2;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.vsp-pagination .vsp-active {
+    background-color: #345a84;
+}

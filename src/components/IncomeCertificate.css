@@ -1,0 +1,118 @@
+.income-cert-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.income-cert-sidebar {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 20px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.income-cert-sidebar-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.income-cert-sidebar-item {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.income-cert-content {
+    margin-left: 270px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.income-cert-title {
+    font-size: 24px;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.income-cert-instructions {
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.income-cert-instructions p {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.income-cert-instructions ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.income-cert-register-btn {
+    background-color: #ffa726;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.income-cert-register-btn:hover {
+    background-color: #fb8c00;
+}
+
+.income-cert-form {
+    background-color: #fffde7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.income-cert-form-row {
+    margin-bottom: 15px;
+}
+
+.income-cert-form-row label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.income-cert-form-row input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.income-cert-search-btn {
+    background-color: #ffa726;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.income-cert-search-btn:hover {
+    background-color: #fb8c00;
+}
+
+.income-cert-footer {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: auto;
+}

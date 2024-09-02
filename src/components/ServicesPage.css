@@ -1,0 +1,140 @@
+.srv-services-page {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.srv-sidebar {
+    width: 250px;
+    background-color: #487DB2;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.srv-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.srv-sidebar ul li {
+    margin: 15px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.srv-main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.srv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.srv-service-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.srv-user-info {
+    text-align: right;
+    color: #666;
+}
+
+.srv-services-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.srv-filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.srv-filter {
+    flex-basis: 30%;
+}
+
+.srv-filter label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.srv-filter select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.srv-search {
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.srv-search label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.srv-search input {
+    width: calc(100% - 80px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.srv-search button {
+    padding: 5px 15px;
+    border: none;
+    background-color: #487DB2;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.srv-service-list {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.srv-service-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.srv-service-list th, .srv-service-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.srv-pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.srv-pagination button {
+    padding: 5px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #487DB2;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.srv-pagination .srv-active {
+    background-color: #345a84;
+}

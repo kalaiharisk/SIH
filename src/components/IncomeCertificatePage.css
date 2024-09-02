@@ -1,0 +1,170 @@
+.income1-container {
+  display: flex;
+  width: 100%;
+}
+
+.income1-sidebar {
+  width: 20%;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+}
+
+.income1-sidebar h3 {
+  margin-top: 0;
+}
+
+.income1-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.income1-sidebar li {
+  margin-bottom: 10px;
+}
+
+.income1-main-content {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.income1-navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.income1-navbar button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.income1-navbar button:hover {
+  background-color: #0059b3;
+}
+
+.income1-form-section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.income1-form-section h2,
+.income1-form-section h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.income1-form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.income1-form-row label {
+  width: 30%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.income1-form-row input,
+.income1-form-row select {
+  width: 60%;
+  padding: 8px; /* Increased padding for more space */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.income1-form-row input[type="number"] {
+  padding: 8px; /* Consistent padding for number inputs */
+}
+
+.income1-address-details,
+.income1-additional-details {
+  margin-top: 20px;
+}
+
+.income1-family-members {
+  margin-top: 30px;
+}
+
+.income1-family-table {
+  margin-top: 10px;
+}
+
+.income1-family-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.income1-family-table th,
+.income1-family-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.income1-add-member {
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.income1-add-member:hover {
+  background-color: #003366;
+}
+
+.income1-income-details {
+  margin-top: 30px;
+}
+
+.income1-income-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px; /* Increased margin for spacing */
+}
+
+.income1-income-checkboxes label {
+  display: inline-block;
+  margin-right: 30px; /* Increased space between checkboxes */
+  margin-bottom: 10px; /* Added bottom margin */
+}
+
+.income1-form-row input[type="text"].email,
+.income1-form-row input[type="number"].grand-total {
+  padding: 8px; /* Increased padding for email and grand total fields */
+}
+
+.income1-submit-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.income1-submit,
+.income1-cancel {
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.income1-submit:hover,
+.income1-cancel:hover {
+  background-color: #003366;
+}
+
+.income1-form-row .income1-form-pin-code {
+  margin-right: 10px; /* Increased space between label and input */
+}

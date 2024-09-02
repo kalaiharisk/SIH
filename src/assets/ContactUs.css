@@ -1,0 +1,87 @@
+/* Container and Title */
+.contact-container {
+    padding: 20px;
+        background-color: #ffffff; /* Set the background color to white */
+    
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.contact-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.contact-card-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-card-body {
+    padding: 15px;
+}
+
+/* Text Styling */
+.contact-text {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* List Styling */
+.contact-links, .contact-details {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.contact-link-item, .contact-details li {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.contact-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.contact-btn-info {
+    background-color: #17a2b8;
+    border: 1px solid #17a2b8;
+}
+
+.contact-btn-warning {
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+.contact-btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.contact-btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}

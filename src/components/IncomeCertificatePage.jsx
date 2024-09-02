@@ -1,7 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import '../components/IncomeCertificatePage.css'
 
 const IncomeCertificatePage = () => {
+
+  const [familyMembers, setFamilyMembers] = useState([]);
+  const [currentMember, setCurrentMember] = useState({
+    name: "",
+    age: "",
+    sex: "",
+    relation: "",
+    profession: "",
+    annualIncome: "",
+  });
+  const [isEditing, setIsEditing] = useState(false);
+  const [editIndex, setEditIndex] = useState(null);
+
+  // Handle input change for adding/editing family member
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentMember((prevMember) => ({ ...prevMember, [name]: value }));
+  };
+
+  // Add or update family member details
+  const handleAddOrUpdate = () => {
+    if (isEditing) {
+      const updatedMembers = familyMembers.map((member, index) =>
+        index === editIndex ? currentMember : member
+      );
+      setFamilyMembers(updatedMembers);
+      setIsEditing(false);
+      setEditIndex(null);
+    } else {
+      setFamilyMembers([...familyMembers, currentMember]);
+    }
+    setCurrentMember({
+      name: "",
+      age: "",
+      sex: "",
+      relation: "",
+      profession: "",
+      annualIncome: "",
+    });
+  };
+
+  // Handle edit action
+  const handleEdit = (index) => {
+    setCurrentMember(familyMembers[index]);
+    setIsEditing(true);
+    setEditIndex(index);
+  };
+
+  // Handle delete action
+  const handleDelete = (index) => {
+    const updatedMembers = familyMembers.filter((_, i) => i !== index);
+    setFamilyMembers(updatedMembers);
+  };
+
+
+
   return (
     <div className="income1-container">
       {/* Sidebar Section */}
@@ -31,7 +87,7 @@ const IncomeCertificatePage = () => {
           <div className="income1-applicant-details">
             <h3>Applicant Detail</h3>
             <div className="income1-form-row">
-              <label>Appellation *</label> 
+              <label>Appellation *</label>
               <input type="text" />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Aadhaar No. *</label>
@@ -94,7 +150,7 @@ const IncomeCertificatePage = () => {
             </div>
             <div className="income1-form-row">
               <label>Pin Code *</label>
-              <input type="text" style={{marginRight:"51%"}}/>
+              <input type="text" style={{ marginRight: "51%" }} />
             </div>
           </div>
 
@@ -125,7 +181,7 @@ const IncomeCertificatePage = () => {
             </div>
             <div className="income1-form-row">
               <label>Pin Code *</label>
-              <input type="text" style={{marginRight:"51%"}}/>
+              <input type="text" style={{ marginRight: "51%" }} />
             </div>
           </div>
 
@@ -141,51 +197,97 @@ const IncomeCertificatePage = () => {
             </div>
             <div className="income1-form-row">
               <label>Email Id *</label>
-              <input type="email" style={{marginRight:"51%"}}/>
+              <input type="email" style={{ marginRight: "51%" }} />
             </div>
           </div>
+
           {/* Family Members Section */}
           <div className="income1-family-members">
             <h3>Details of Family Members</h3>
             <div className="income1-form-row">
-              <label>Total number of family members *</label>
-              <input type="number"  style={{marginRight:"51%"}}/>
+              <label>Name</label>
+              <input
+                type="text"
+                name="name"
+                value={currentMember.name}
+                onChange={handleInputChange}
+              />&nbsp;&nbsp;&nbsp;
+              <label>Age</label>
+              <input
+                type="number"
+                name="age"
+                value={currentMember.age}
+                onChange={handleInputChange}
+              />&nbsp;&nbsp;&nbsp;
+              <label>Sex</label>
+              <select
+                name="sex"
+                value={currentMember.sex}
+                onChange={handleInputChange}
+              >
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>&nbsp;&nbsp;&nbsp;
+              <label>Relation</label>
+              <input
+                type="text"
+                name="relation"
+                value={currentMember.relation}
+                onChange={handleInputChange}
+              />&nbsp;&nbsp;&nbsp;
+              <label>Profession</label>
+              <input
+                type="text"
+                name="profession"
+                value={currentMember.profession}
+                onChange={handleInputChange}
+              />&nbsp;&nbsp;&nbsp;
+              <label>Annual Income</label>
+              <input
+                type="number"
+                name="annualIncome"
+                value={currentMember.annualIncome}
+                onChange={handleInputChange}
+              />
             </div>
-            <div className="income1-family-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Sex</th>
-                    <th>Relation</th>
-                    <th>Profession</th>
-                    <th>Monthly Income</th>
-                    <th>Annual Income</th>
-                    <th>Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" /></td>
-                    <td><input type="number" /></td>
+            <button onClick={handleAddOrUpdate} className="income1-add-member">
+              {isEditing ? "Update Member" : "Add Member"}
+            </button>
+
+
+          </div>
+          {/* Family Members Table */}
+          <div className="income1-family-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Sex</th>
+                  <th>Relation</th>
+                  <th>Profession</th>
+                  <th>Annual Income</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {familyMembers.map((member, index) => (
+                  <tr key={index}>
+                    <td>{member.name}</td>
+                    <td>{member.age}</td>
+                    <td>{member.sex}</td>
+                    <td>{member.relation}</td>
+                    <td>{member.profession}</td>
+                    <td>{member.annualIncome}</td>
                     <td>
-                      <select>
-                        <option value="">Select</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                      </select>
+                      <button onClick={() => handleEdit(index)}>Edit</button> &nbsp;&nbsp;
+                      <button onClick={() => handleDelete(index)}>Delete</button>
                     </td>
-                    <td><input type="text" /></td>
-                    <td><input type="text" /></td>
-                    <td><input type="number" /></td>
-                    <td><input type="number" /></td>
-                    <td><button>Delete</button></td>
                   </tr>
-                </tbody>
-              </table>
-              <button className="income1-add-member">Add</button>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           {/* Income Details Section */}
@@ -210,7 +312,7 @@ const IncomeCertificatePage = () => {
             </div>
             <div className="income1-form-row">
               <label>Grand Total (In Rs.)</label>
-              <input type="number" style={{marginRight:"65%"}}/>
+              <input type="number" style={{ marginRight: "65%" }} />
             </div>
           </div>
 

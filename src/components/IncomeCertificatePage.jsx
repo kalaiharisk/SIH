@@ -110,7 +110,7 @@ const IncomeCertificatePage = () => {
     doc.setFont('Helvetica', 'normal');
     doc.setFontSize(12);
     doc.text(
-      `I ${applicantDetails.name}, son/daughter of ${applicantDetails.fatherName} aged ${applicantDetails.age},
+      `I ${applicantDetails.name}, son/daughter of ${applicantDetails.fatherName} born on ${applicantDetails.age},
       residing at ${applicantDetails.address} hereby declare that the building plan approval submitted is true and
       correct to the best of my knowledge and belief. I fully understand the consequences of giving false information.
       If the information is found to be false, I shall be liable for penalty/punishment or legal action.
@@ -267,6 +267,54 @@ const IncomeCertificatePage = () => {
           <div className="income1-applicant-details">
             <h3>Applicant Detail</h3>
             <div className="income1-form-row">
+              <label>Appellation *</label>
+              <input type="text" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label>Aadhaar No. *</label>
+              <input type="text" />
+            </div>
+            <div className="income1-form-row">
+              <label>Applicant Name *</label>
+              <input type="text" name="name"
+                value={applicantDetails.name}
+                onChange={handleApplicantChange}/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label>Father/Husband/Guardian Name *</label>
+              <input type="text" name="fatherName"
+                value={applicantDetails.fatherName}
+                onChange={handleApplicantChange}/>
+            </div>
+            <div className="income1-form-row">
+              <label>Date of Birth *</label>
+              <input type="date" name="age"
+                value={applicantDetails.age}
+                onChange={handleApplicantChange}/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label>Gender *</label>
+              <select>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div className="income1-form-row">
+              <label>Marital Status *</label>
+              <select>
+                <option value="unmarried">Unmarried</option>
+                <option value="married">Married</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label>Religion *</label>
+              <input type="text" />
+            </div>
+            <div className="income1-form-row">
+              <label>Community *</label>
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label>Occupation *</label>
+              <input type="text" />
+            </div>
+          </div>
+          {/* <div className="income1-applicant-details">
+            <h3>Applicant Detail</h3>
+            <div className="income1-form-row">
               <label>Applicant Name *</label>
               <input
                 type="text"
@@ -309,7 +357,7 @@ const IncomeCertificatePage = () => {
                 onChange={handleApplicantChange}
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Current Address Section */}
           <div className="income1-address-details">
@@ -318,7 +366,9 @@ const IncomeCertificatePage = () => {
               <label>State *</label>
               <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>District *</label>
-              <input type="text" />
+              <input type="text" name="address"
+                value={applicantDetails.address}
+                onChange={handleApplicantChange}/>
             </div>
             <div className="income1-form-row">
               <label>Taluk *</label>
@@ -334,7 +384,9 @@ const IncomeCertificatePage = () => {
             </div>
             <div className="income1-form-row">
               <label>Pin Code *</label>
-              <input type="text" style={{ marginRight: "51%" }} />
+              <input type="text" style={{ marginRight: "51%" }} name="pinCode"
+                value={applicantDetails.pinCode}
+                onChange={handleApplicantChange}/>
             </div>
           </div>
 

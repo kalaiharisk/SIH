@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../components/IncomeCertificatePage.css'
+import { useNavigate } from "react-router-dom";
 
 const IncomeCertificatePage = () => {
 
@@ -318,7 +319,7 @@ const IncomeCertificatePage = () => {
 
           {/* Submit Section */}
           <div className="income1-submit-section">
-            <button className="income1-submit">Submit</button>
+            <button className="income1-submit" onClick={handleSubmit}>Submit</button>
             <button className="income1-cancel">Cancel</button>
           </div>
         </div>

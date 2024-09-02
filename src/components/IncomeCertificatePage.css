@@ -168,3 +168,88 @@
 .income1-form-row .income1-form-pin-code {
   margin-right: 10px; /* Increased space between label and input */
 }
+
+/* Enhanced Font Styles and Layout */
+.income1-income-details-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif; /* Modern and clean font */
+}
+
+.income1-income-details-description {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #343a40;
+  line-height: 1.8; /* Improved readability */
+  font-weight: 300; /* Light weight for a modern feel */
+}
+
+.income1-income-details-file-input {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.income1-income-details-file-input:hover {
+  border-color: #007bff;
+}
+
+.income1-income-details-can-number {
+  margin-bottom: 20px;
+}
+
+.income1-income-details-can-number input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.income1-income-details-can-number input::placeholder {
+  color: #6c757d;
+}
+
+.income1-income-details-container > div {
+  margin-bottom: 25px;
+}
+
+.income1-income-details-container > div:last-child {
+  margin-bottom: 0;
+}
+
+.income1-income-details-file-input, 
+.income1-income-details-can-number input {
+  margin-top: 10px;
+}
+
+.income1-income-details-container p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+.income1-income-details-header {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-weight: 500; /* Semi-bold for headers */
+}
+
+.income1-income-details-section {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 15px;
+  background-color: #ffffff;
+}

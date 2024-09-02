@@ -31,20 +31,23 @@ const IncomeCertificatePage = () => {
           <div className="income1-applicant-details">
             <h3>Applicant Detail</h3>
             <div className="income1-form-row">
-              <label>Appellation *</label>
+              <label>Appellation *</label> 
               <input type="text" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Aadhaar No. *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Applicant Name *</label>
               <input type="text" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Father/Husband/Guardian Name *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Date of Birth *</label>
               <input type="date" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Gender *</label>
               <select>
                 <option value="male">Male</option>
@@ -56,13 +59,13 @@ const IncomeCertificatePage = () => {
               <select>
                 <option value="unmarried">Unmarried</option>
                 <option value="married">Married</option>
-              </select>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Religion *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Community *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Occupation *</label>
               <input type="text" />
             </div>
@@ -73,25 +76,25 @@ const IncomeCertificatePage = () => {
             <h3>Current Address</h3>
             <div className="income1-form-row">
               <label>State *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>District *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Taluk *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Revenue Village *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Street Name/No./Hamlet *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Building/Door/Flat No.</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Pin Code *</label>
-              <input type="text" />
+              <input type="text" style={{marginRight:"51%"}}/>
             </div>
           </div>
 
@@ -99,45 +102,46 @@ const IncomeCertificatePage = () => {
           <div className="income1-address-details">
             <h3>Permanent Address</h3>
             <div className="income1-form-row">
-              <input type="checkbox" />
               <label>Same as current address</label>
+              <input type="checkbox" />
             </div>
             <div className="income1-form-row">
               <label>State *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>District *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Taluk *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Revenue Village *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Street Name/No./Hamlet *</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Building/Door/Flat No.</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Pin Code *</label>
-              <input type="text" />
+              <input type="text" style={{marginRight:"51%"}}/>
             </div>
           </div>
 
           {/* Additional Details Section */}
           <div className="income1-additional-details">
             <h3>Applicant Detail</h3>
+            <br />
             <div className="income1-form-row">
               <label>Phone/Landline No. with STD Code</label>
-              <input type="text" />
+              <input type="text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <label>Mobile Number *</label>
               <input type="text" />
             </div>
             <div className="income1-form-row">
               <label>Email Id *</label>
-              <input type="email" />
+              <input type="email" style={{marginRight:"51%"}}/>
             </div>
           </div>
           {/* Family Members Section */}
@@ -145,7 +149,7 @@ const IncomeCertificatePage = () => {
             <h3>Details of Family Members</h3>
             <div className="income1-form-row">
               <label>Total number of family members *</label>
-              <input type="number" />
+              <input type="number"  style={{marginRight:"51%"}}/>
             </div>
             <div className="income1-family-table">
               <table>
@@ -196,17 +200,17 @@ const IncomeCertificatePage = () => {
             </div>
             <div className="income1-form-row">
               <label>PAN Number *</label>
-              <input type="number" />
+              <input type="number" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="span1div"></span>
               <label>Monthly Income (In Rs.)</label>
-              <input type="number" />
+              <input type="number" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="span1div"></span>
               <label>Annual Income (In Rs.)</label>
               <input type="number" />
             </div>
             <div className="income1-form-row">
               <label>Grand Total (In Rs.)</label>
-              <input type="number" />
+              <input type="number" style={{marginRight:"65%"}}/>
             </div>
           </div>
 
